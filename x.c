@@ -264,8 +264,6 @@ bpress(XEvent *e)
 				return;
 			}
 		}
-    mousereport(e);
-    return;
   }
 
 	for (mk = mkeys; mk < mkeys + mkeyslen; mk++) {
