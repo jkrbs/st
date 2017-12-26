@@ -131,6 +131,7 @@ static void clippaste(const Arg *);
 static void kscrolldown(const Arg *);
 static void kscrollup(const Arg *);
 static void numlock(const Arg *);
+static void swapcolors(const Arg *);
 static void selpaste(const Arg *);
 static void zoom(const Arg *);
 static void zoomabs(const Arg *);
@@ -221,6 +222,8 @@ char *opt_name  = NULL;
 char *opt_title = NULL;
 int oldbutton   = 3; /* button event on startup: 3 = release */
 
+int usealtcolors = 0; /* 1 to use alternate palette */
+
 static CSIEscape csiescseq;
 static STREscape strescseq;
 static int iofd = 1;
@@ -235,7 +238,7 @@ static Rune utfmin[UTF_SIZ + 1] = {       0,    0,  0x80,  0x800,  0x10000};
 static Rune utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};
 
 /* config.h array lengths */
-size_t colornamelen = LEN(colorname);
+size_t colornamelen = MAX(LEN(colorname), LEN(altcolorname));
 size_t mshortcutslen = LEN(mshortcuts);
 size_t mkeyslen = LEN(mkeys);
 size_t shortcutslen = LEN(shortcuts);
@@ -2697,6 +2700,14 @@ void
 numlock(const Arg *dummy)
 {
 	term.numlock ^= 1;
+}
+
+void
+swapcolors(const Arg *dummy)
+{
+	usealtcolors = !usealtcolors;
+	xloadcols();
+	redraw();
 }
 
 char*
