@@ -271,6 +271,7 @@ extern unsigned int defaultfg;
 extern unsigned int defaultbg;
 extern unsigned int defaultcs;
 extern unsigned int defaultrcs;
+extern unsigned int defaultgray;
 extern unsigned int cursorshape;
 extern unsigned int cols;
 extern unsigned int rows;
