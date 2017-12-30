@@ -1158,6 +1158,11 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
 			base.fg = defaultgray;
 	}
 
+  /* if color 0 is used as foreground, use gray */
+  if (base.fg == 0 && base.bg == defaultbg) {
+    base.fg = defaultgray;
+  }
+
 	if (IS_TRUECOL(base.fg)) {
 		colfg.alpha = 0xffff;
 		colfg.red = TRUERED(base.fg);
