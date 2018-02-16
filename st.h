@@ -2,7 +2,7 @@
 
 /* Arbitrary sizes */
 #define UTF_SIZ       4
-#define HISTSIZE      2000
+#define HISTSIZE      20000
 
 /* macros */
 #define MIN(a, b)		((a) < (b) ? (a) : (b))
