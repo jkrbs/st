@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-char font[] = "SourceCodePro Nerd Font:size=10:antialias=true:autohint=true";
+char font[] = "Liberation Mono-12:antialias=true:autohint=true";
 int borderpx = 2;
 
 /*
