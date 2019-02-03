@@ -83,49 +83,49 @@ char termname[] = "st-256color";
 static unsigned int tabspaces = 8;
 
 
-/* Solarized colors */
-#define solarized_base03  "#002b36"
-#define solarized_base02  "#073642"
-#define solarized_base01  "#586e75"
-#define solarized_base00  "#657b83"
-#define solarized_base0   "#839496"
-#define solarized_base1   "#93a1a1"
-#define solarized_base2   "#eee8d5"
-#define solarized_base3   "#fdf6e3"
-#define solarized_yellow  "#b58900"
-#define solarized_orange  "#cb4b16"
-#define solarized_red     "#dc322f"
-#define solarized_magenta "#d33682"
-#define solarized_violet  "#6c71c4"
-#define solarized_blue    "#268bd2"
-#define solarized_cyan    "#2aa198"
-#define solarized_green   "#859900"
+/* color colors */
+#define color_base03  "#002b36"
+#define color_base02  "#073642"
+#define color_base01  "#242424"
+#define color_base00  "#f3f6ee"
+#define color_base0   "#839496"
+#define color_base1   "#93a1a1"
+#define color_base2   "#eee8d5"
+#define color_base3   "#fdf6e3"
+#define color_yellow  "#cae682"
+#define color_orange  "#D4C4A9"
+#define color_red     "#f08080"
+#define color_magenta "#f08080"
+#define color_violet  "#a7a7d1"
+#define color_blue    "#8ac6f2"
+#define color_cyan    "#53dccd"
+#define color_green   "#95e454"
 
 /* Terminal colors (16 first used in escape sequence) */
 const char *colorname[] = {
-    /* solarized light */
+    /* color */
 	"#ffffff", /*  0: black    */
-	solarized_red, /*  1: red      */
-	solarized_green, /*  2: green    */
-	solarized_yellow, /*  3: yellow   */
-	solarized_blue, /*  4: blue     */
-	solarized_magenta, /*  5: magenta  */
-	solarized_cyan, /*  6: cyan     */
+	color_red, /*  1: red      */
+	color_green, /*  2: green    */
+	color_yellow, /*  3: yellow   */
+	color_blue, /*  4: blue     */
+	color_magenta, /*  5: magenta  */
+	color_cyan, /*  6: cyan     */
 	"#000000", /*  7: white    */
 
-	"#f9f9f9",         /*  8: brblack  */
-	solarized_orange,  /*  9: brred    */
-	solarized_base1,   /* 10: brgreen  */
-	solarized_base0,   /* 11: bryellow */
-	solarized_base00,  /* 12: brblue   */
-	solarized_violet,  /* 13: brmagenta*/
-	solarized_base01,  /* 14: brcyan   */
-	solarized_base03,  /* 15: brwhite  */
+	color_base01,  /*  8: brblack  */
+	color_orange,  /*  9: brred    */
+	color_base1,   /* 10: brgreen  */
+	color_base0,   /* 11: bryellow */
+	color_base00,  /* 12: brblue   */
+	color_violet,  /* 13: brmagenta*/
+	color_base01,  /* 14: brcyan   */
+    color_base03,  /* 15: brwhite  */
 };
 
 /* Terminal colors for alternate (dark) palette */
 const char *altcolorname[] = {
-    /* solarized dark */
+    /* Solarized dark */
     "#073642",  /*  0: black    */
     "#dc322f",  /*  1: red      */
     "#859900",  /*  2: green    */
@@ -150,7 +150,7 @@ const char *altcolorname[] = {
  */
 unsigned int defaultfg = 12;
 unsigned int defaultbg = 8;
-unsigned int defaultcs = 14;
+unsigned int defaultcs = 12;
 unsigned int defaultrcs = 15;
 unsigned int defaultgray = 10;
 
